@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "vCRvOt0Rr08=",
+  "success": true,
+  "projectFilePath": "C:\\github\\AchadosPerdidos\\src\\AchadosPerdidos.Blazor\\AchadosPerdidos.Blazor.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kuhne\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.5\\microsoft.aspnetcore.app.internal.assets.10.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}

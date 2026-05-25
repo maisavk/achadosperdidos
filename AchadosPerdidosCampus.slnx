@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/AchadosPerdidos.Application/AchadosPerdidos.Application.csproj" />
+    <Project Path="src/AchadosPerdidos.Blazor/AchadosPerdidos.Blazor.csproj" />
+    <Project Path="src/AchadosPerdidos.ConsoleApp/AchadosPerdidos.ConsoleApp.csproj" />
+    <Project Path="src/AchadosPerdidos.Domain/AchadosPerdidos.Domain.csproj" />
+    <Project Path="src/AchadosPerdidos.Infrastructure/AchadosPerdidos.Infrastructure.csproj" />
+  </Folder>
+</Solution>
