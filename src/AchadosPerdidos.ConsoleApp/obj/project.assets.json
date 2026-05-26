@@ -1,11 +1,67 @@
 {
   "version": 3,
   "targets": {
-    "net10.0": {}
+    "net10.0": {
+      "AchadosPerdidos.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "AchadosPerdidos.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AchadosPerdidos.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AchadosPerdidos.Application.dll": {}
+        }
+      },
+      "AchadosPerdidos.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/AchadosPerdidos.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AchadosPerdidos.Domain.dll": {}
+        }
+      },
+      "AchadosPerdidos.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "AchadosPerdidos.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AchadosPerdidos.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AchadosPerdidos.Infrastructure.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "AchadosPerdidos.Application/1.0.0": {
+      "type": "project",
+      "path": "../AchadosPerdidos.Application/AchadosPerdidos.Application.csproj",
+      "msbuildProject": "../AchadosPerdidos.Application/AchadosPerdidos.Application.csproj"
+    },
+    "AchadosPerdidos.Domain/1.0.0": {
+      "type": "project",
+      "path": "../AchadosPerdidos.Domain/AchadosPerdidos.Domain.csproj",
+      "msbuildProject": "../AchadosPerdidos.Domain/AchadosPerdidos.Domain.csproj"
+    },
+    "AchadosPerdidos.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../AchadosPerdidos.Infrastructure/AchadosPerdidos.Infrastructure.csproj",
+      "msbuildProject": "../AchadosPerdidos.Infrastructure/AchadosPerdidos.Infrastructure.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net10.0": []
+    "net10.0": [
+      "AchadosPerdidos.Application >= 1.0.0",
+      "AchadosPerdidos.Infrastructure >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\kuhne\\.nuget\\packages\\": {}
@@ -31,7 +87,14 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\github\\AchadosPerdidos\\src\\AchadosPerdidos.Application\\AchadosPerdidos.Application.csproj": {
+              "projectPath": "C:\\github\\AchadosPerdidos\\src\\AchadosPerdidos.Application\\AchadosPerdidos.Application.csproj"
+            },
+            "C:\\github\\AchadosPerdidos\\src\\AchadosPerdidos.Infrastructure\\AchadosPerdidos.Infrastructure.csproj": {
+              "projectPath": "C:\\github\\AchadosPerdidos\\src\\AchadosPerdidos.Infrastructure\\AchadosPerdidos.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

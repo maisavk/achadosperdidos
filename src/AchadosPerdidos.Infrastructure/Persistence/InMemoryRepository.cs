@@ -1,43 +1,48 @@
 using AchadosPerdidos.Domain.Entities;
+using AchadosPerdidos.Domain.Interfaces;
 
 namespace AchadosPerdidos.Infrastructure.Persistence
 {
-    public static class InMemoryRepository
+    public class InMemoryRepository : IRepository
     {
-        public static List<ObjetoEncontrado> Objetos { get; } = new();
-        public static List<Pessoa> Pessoas { get; } = new();
-        public static List<SolicitacaoRetirada> Solicitacoes { get; } = new();
+        private readonly List<ObjetoEncontrado> _objetos = new();
+        private readonly List<Pessoa> _pessoas = new();
+        private readonly List<SolicitacaoRetirada> _solicitacoes = new();
 
-        static InMemoryRepository()
+        public IReadOnlyCollection<ObjetoEncontrado> Objetos => _objetos;
+        public IReadOnlyCollection<Pessoa> Pessoas => _pessoas;
+        public IReadOnlyCollection<SolicitacaoRetirada> Solicitacoes => _solicitacoes;
+
+        public InMemoryRepository()
         {
-            if (!Pessoas.Any())
+            if (!_pessoas.Any())
             {
-                Pessoas.Add(new Pessoa("Alice Silva", "12345678900", "Aluno") { Id = 1 });
-                Pessoas.Add(new Pessoa("Bruno Souza", "98765432100", "Professor") { Id = 2 });
-                Pessoas.Add(new Pessoa("Carla Lima", "55544433322", "Funcionário") { Id = 3 });
+                _pessoas.Add(new Pessoa("Alice Silva", "12345678900", "Aluno") { Id = 1 });
+                _pessoas.Add(new Pessoa("Bruno Souza", "98765432100", "Professor") { Id = 2 });
+                _pessoas.Add(new Pessoa("Carla Lima", "55544433322", "Funcionário") { Id = 3 });
             }
         }
 
-        public static void AdicionarObjeto(ObjetoEncontrado objeto)
+        public void AdicionarObjeto(ObjetoEncontrado objeto)
         {
-            objeto.Id = Objetos.Count + 1;
-            Objetos.Add(objeto);
+            objeto.Id = _objetos.Count + 1;
+            _objetos.Add(objeto);
         }
 
-        public static void AdicionarSolicitacao(SolicitacaoRetirada solicitacao)
+        public void AdicionarSolicitacao(SolicitacaoRetirada solicitacao)
         {
-            solicitacao.Id = Solicitacoes.Count + 1;
-            Solicitacoes.Add(solicitacao);
+            solicitacao.Id = _solicitacoes.Count + 1;
+            _solicitacoes.Add(solicitacao);
         }
 
-        public static ObjetoEncontrado? ObterObjetoPorId(int id)
+        public ObjetoEncontrado? ObterObjetoPorId(int id)
         {
-            return Objetos.FirstOrDefault(x => x.Id == id);
+            return _objetos.FirstOrDefault(x => x.Id == id);
         }
 
-        public static Pessoa? ObterPessoaPorId(int id)
+        public Pessoa? ObterPessoaPorId(int id)
         {
-            return Pessoas.FirstOrDefault(x => x.Id == id);
+            return _pessoas.FirstOrDefault(x => x.Id == id);
         }
     }
 }

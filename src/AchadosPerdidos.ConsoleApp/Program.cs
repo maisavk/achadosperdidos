@@ -1,7 +1,9 @@
 ﻿using AchadosPerdidos.Application.Services;
 using AchadosPerdidos.Domain.Enums;
+using AchadosPerdidos.Infrastructure.Persistence;
 
-var service = new SistemaService();
+var repository = new InMemoryRepository();
+var service = new SistemaService(repository);
 
 while (true)
 {

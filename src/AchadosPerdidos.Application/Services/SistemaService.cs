@@ -1,21 +1,28 @@
 using AchadosPerdidos.Domain.Entities;
 using AchadosPerdidos.Domain.Enums;
-using AchadosPerdidos.Infrastructure.Persistence;
+using AchadosPerdidos.Domain.Interfaces;
 
 namespace AchadosPerdidos.Application.Services
 {
     public class SistemaService
     {
+        private readonly IRepository _repository;
+
+        public SistemaService(IRepository repository)
+        {
+            _repository = repository ?? throw new ArgumentNullException(nameof(repository));
+        }
+
         public ObjetoEncontrado RegistrarObjetoEncontrado(string descricao, string categoria, string local, string estadoConservacao)
         {
             var objeto = new ObjetoEncontrado(descricao, categoria, local, estadoConservacao);
-            InMemoryRepository.AdicionarObjeto(objeto);
+            _repository.AdicionarObjeto(objeto);
             return objeto;
         }
 
         public IEnumerable<ObjetoEncontrado> ConsultarObjetos(string? categoria = null, string? local = null, SituacaoObjeto? situacao = null)
         {
-            return InMemoryRepository.Objetos
+            return _repository.Objetos
                 .Where(o => string.IsNullOrWhiteSpace(categoria) || o.Categoria.Equals(categoria, StringComparison.OrdinalIgnoreCase))
                 .Where(o => string.IsNullOrWhiteSpace(local) || o.Local.Equals(local, StringComparison.OrdinalIgnoreCase))
                 .Where(o => !situacao.HasValue || o.Situacao == situacao.Value)
@@ -24,7 +31,7 @@ namespace AchadosPerdidos.Application.Services
 
         public SolicitacaoRetirada RegistrarSolicitacaoRetirada(int objetoId, int solicitanteId, string descricaoValidacao)
         {
-            var objeto = InMemoryRepository.ObterObjetoPorId(objetoId);
+            var objeto = _repository.ObterObjetoPorId(objetoId);
             if (objeto is null)
                 throw new ArgumentException("Objeto não encontrado.", nameof(objetoId));
 
@@ -34,7 +41,7 @@ namespace AchadosPerdidos.Application.Services
             if (objeto.Situacao == SituacaoObjeto.EmAnalise)
                 throw new InvalidOperationException("Não é possível registrar solicitação: o objeto já está em análise.");
 
-            var solicitante = InMemoryRepository.ObterPessoaPorId(solicitanteId);
+            var solicitante = _repository.ObterPessoaPorId(solicitanteId);
             if (solicitante is null)
                 throw new ArgumentException("Solicitante não encontrado.", nameof(solicitanteId));
 
@@ -42,14 +49,14 @@ namespace AchadosPerdidos.Application.Services
                 throw new InvalidOperationException("A descrição de validação não combina com o objeto informado.");
 
             var solicitacao = new SolicitacaoRetirada(objetoId, solicitanteId, descricaoValidacao);
-            InMemoryRepository.AdicionarSolicitacao(solicitacao);
+            _repository.AdicionarSolicitacao(solicitacao);
             objeto.AlterarSituacao(SituacaoObjeto.EmAnalise);
             return solicitacao;
         }
 
         public ObjetoEncontrado ConfirmarDevolucao(int objetoId)
         {
-            var objeto = InMemoryRepository.ObterObjetoPorId(objetoId);
+            var objeto = _repository.ObterObjetoPorId(objetoId);
             if (objeto is null)
                 throw new ArgumentException("Objeto não encontrado.", nameof(objetoId));
 
@@ -59,7 +66,7 @@ namespace AchadosPerdidos.Application.Services
 
         public IEnumerable<Pessoa> ObterPessoasCadastradas()
         {
-            return InMemoryRepository.Pessoas;
+            return _repository.Pessoas;
         }
 
         private static bool DescricaoCombina(ObjetoEncontrado objeto, string descricaoValidacao)

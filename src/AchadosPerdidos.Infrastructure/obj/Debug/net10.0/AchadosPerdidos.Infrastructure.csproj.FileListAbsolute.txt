@@ -1,0 +1,16 @@
+C:\github\AchadosPerdidos\src\AchadosPerdidos.Infrastructure\bin\Debug\net10.0\AchadosPerdidos.Infrastructure.deps.json
+C:\github\AchadosPerdidos\src\AchadosPerdidos.Infrastructure\bin\Debug\net10.0\AchadosPerdidos.Infrastructure.dll
+C:\github\AchadosPerdidos\src\AchadosPerdidos.Infrastructure\bin\Debug\net10.0\AchadosPerdidos.Infrastructure.pdb
+C:\github\AchadosPerdidos\src\AchadosPerdidos.Infrastructure\bin\Debug\net10.0\AchadosPerdidos.Domain.dll
+C:\github\AchadosPerdidos\src\AchadosPerdidos.Infrastructure\bin\Debug\net10.0\AchadosPerdidos.Domain.pdb
+C:\github\AchadosPerdidos\src\AchadosPerdidos.Infrastructure\obj\Debug\net10.0\AchadosPerdidos.Infrastructure.csproj.AssemblyReference.cache
+C:\github\AchadosPerdidos\src\AchadosPerdidos.Infrastructure\obj\Debug\net10.0\AchadosPerdidos.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\github\AchadosPerdidos\src\AchadosPerdidos.Infrastructure\obj\Debug\net10.0\AchadosPerdidos.Infrastructure.AssemblyInfoInputs.cache
+C:\github\AchadosPerdidos\src\AchadosPerdidos.Infrastructure\obj\Debug\net10.0\AchadosPerdidos.Infrastructure.AssemblyInfo.cs
+C:\github\AchadosPerdidos\src\AchadosPerdidos.Infrastructure\obj\Debug\net10.0\AchadosPerdidos.Infrastructure.csproj.CoreCompileInputs.cache
+C:\github\AchadosPerdidos\src\AchadosPerdidos.Infrastructure\obj\Debug\net10.0\AchadosPerdidos.Infrastructure.sourcelink.json
+C:\github\AchadosPerdidos\src\AchadosPerdidos.Infrastructure\obj\Debug\net10.0\AchadosP.1A359138.Up2Date
+C:\github\AchadosPerdidos\src\AchadosPerdidos.Infrastructure\obj\Debug\net10.0\AchadosPerdidos.Infrastructure.dll
+C:\github\AchadosPerdidos\src\AchadosPerdidos.Infrastructure\obj\Debug\net10.0\refint\AchadosPerdidos.Infrastructure.dll
+C:\github\AchadosPerdidos\src\AchadosPerdidos.Infrastructure\obj\Debug\net10.0\AchadosPerdidos.Infrastructure.pdb
+C:\github\AchadosPerdidos\src\AchadosPerdidos.Infrastructure\obj\Debug\net10.0\ref\AchadosPerdidos.Infrastructure.dll

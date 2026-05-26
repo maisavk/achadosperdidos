@@ -1,0 +1,12 @@
+C:\github\AchadosPerdidos\src\AchadosPerdidos.Domain\bin\Debug\net10.0\AchadosPerdidos.Domain.deps.json
+C:\github\AchadosPerdidos\src\AchadosPerdidos.Domain\bin\Debug\net10.0\AchadosPerdidos.Domain.dll
+C:\github\AchadosPerdidos\src\AchadosPerdidos.Domain\bin\Debug\net10.0\AchadosPerdidos.Domain.pdb
+C:\github\AchadosPerdidos\src\AchadosPerdidos.Domain\obj\Debug\net10.0\AchadosPerdidos.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\github\AchadosPerdidos\src\AchadosPerdidos.Domain\obj\Debug\net10.0\AchadosPerdidos.Domain.AssemblyInfoInputs.cache
+C:\github\AchadosPerdidos\src\AchadosPerdidos.Domain\obj\Debug\net10.0\AchadosPerdidos.Domain.AssemblyInfo.cs
+C:\github\AchadosPerdidos\src\AchadosPerdidos.Domain\obj\Debug\net10.0\AchadosPerdidos.Domain.csproj.CoreCompileInputs.cache
+C:\github\AchadosPerdidos\src\AchadosPerdidos.Domain\obj\Debug\net10.0\AchadosPerdidos.Domain.sourcelink.json
+C:\github\AchadosPerdidos\src\AchadosPerdidos.Domain\obj\Debug\net10.0\AchadosPerdidos.Domain.dll
+C:\github\AchadosPerdidos\src\AchadosPerdidos.Domain\obj\Debug\net10.0\refint\AchadosPerdidos.Domain.dll
+C:\github\AchadosPerdidos\src\AchadosPerdidos.Domain\obj\Debug\net10.0\AchadosPerdidos.Domain.pdb
+C:\github\AchadosPerdidos\src\AchadosPerdidos.Domain\obj\Debug\net10.0\ref\AchadosPerdidos.Domain.dll
